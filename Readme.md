@@ -16,61 +16,16 @@ The goal of this tutorial is to provide a clear understanding of how these diffe
 ### **1. Convolutional Neural Networks (CNN)**
 CNNs are used for image-related tasks. They use **convolutional layers** to extract spatial features from images. CNNs are ideal for tasks such as image classification, object detection, and more. The key operation in CNN is the **convolution operation**, which automatically detects patterns in the data.
 
-#### **Mathematical Function for CNN**:
-\[
-(I * K)(i, j) = \sum_m \sum_n I(i + m, j + n) K(m, n)
-\]
-Where:
-- \( I \) is the input image
-- \( K \) is the kernel (filter)
-- \( (i, j) \) are the coordinates of the output feature map
-- \( (m, n) \) are the coordinates of the kernel
+
 
 ### **2. Recurrent Neural Networks (RNN)**
 RNNs are used for sequential data like time series, text, or speech. They maintain an internal state, which gets updated with each new input. RNNs are ideal for tasks where the order of data points is essential, such as sentiment analysis or language translation.
 
-#### **Mathematical Function for RNN**:
-\[
-h_t = \sigma(W_h h_{t-1} + W_x x_t + b)
-\]
-Where:
-- \( h_t \) is the hidden state at time \( t \)
-- \( h_{t-1} \) is the hidden state at time \( t-1 \)
-- \( x_t \) is the input at time \( t \)
-- \( W_h \), \( W_x \) are weight matrices
-- \( \sigma \) is the activation function (usually tanh or ReLU)
-- \( b \) is the bias term
+
 
 ### **3. Long Short-Term Memory Networks (LSTM)**
 LSTMs are a type of RNN designed to handle long-term dependencies and overcome the vanishing gradient problem. They are effective in processing sequences with long-term dependencies, such as text, speech, or time-series forecasting.
 
-#### **Key Equations for LSTM**:
-- **Forget Gate**:
-  \[
-  f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-  \]
-- **Input Gate**:
-  \[
-  i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-  \]
-- **Candidate Cell State**:
-  \[
-  	ilde{C}_t = 	anh(W_C \cdot [h_{t-1}, x_t] + b_C)
-  \]
-- **Cell State Update**:
-  \[
-  C_t = f_t \cdot C_{t-1} + i_t \cdot 	ilde{C}_t
-  \]
-- **Output Gate**:
-  \[
-  o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-  \]
-- **Final Output**:
-  \[
-  h_t = o_t \cdot 	anh(C_t)
-  \]
-
----
 
 ## **Datasets**
 
